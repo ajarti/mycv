@@ -39,6 +39,25 @@
                         <div class="q-mb-xl">
                             <div class="cv-title title-colour">PROFILE</div>
                             <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
+                            <div class="row justify-between">
+                                <template v-for="strength in strengths">
+                                    <div class="col-sm-2">
+                                        <q-knob
+                                                v-model="strength.value"
+                                                min=0
+                                                max=100
+                                                style="font-size: 0.5em; font-variant: all-small-caps"
+                                                line-width="6px"
+                                                size="100px"
+                                                color="grey-9"
+                                                readonly
+                                        >
+                                            <span class="q-caption" v-text="strength.title"></span>
+                                        </q-knob>
+                                    </div>
+                                </template>
+                            </div>
+
                         </div>
                     </div>
 
@@ -75,36 +94,33 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-8 q-pa-lg">
+                    <div class="col-sm-8 q-px-lg">
 
                         <!--POSITIONS-->
-                        <div class="q-mb-xl">
-                            <div class="cv-title title-colour">WORK</div>
-                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
-                            <q-timeline class="q-pl-md" color="secondary">
+                        <div class="cv-title title-colour">WORK</div>
+                        <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
+                        <q-timeline class="q-pl-md q-pb-none" color="secondary">
 
-                                <template v-for="position in positions">
-                                    <q-timeline-entry
-                                            :title="position.title"
-                                            :subtitle="dateRange(position)"
-                                            side="right"
-                                    >
+                            <template v-for="position in positions">
+                                <q-timeline-entry
+                                        :title="position.title"
+                                        :subtitle="dateRange(position)"
+                                        side="right"
+                                >
+                                    <div>
                                         <div>
-                                            <div>
-                                                <!--q-timeline-place-->
-                                                <span class="text-grey-7 text-weight-bolder fade-75">
+                                            <!--q-timeline-place-->
+                                            <span class="text-grey-7 text-weight-bolder fade-75">
                                                 <span v-text="position.company"></span> &middot;
                                                 <span class="text-grey-5" v-text="position.location"></span>
                                             </span>
-                                            </div>
-                                            <div class="q-mt-sm text-grey-8" v-html="position.description">
-                                            </div>
                                         </div>
-                                    </q-timeline-entry>
-                                </template>
+                                        <!--<div class="q-mt-sm text-grey-8" v-html="position.description"></div>-->
+                                    </div>
+                                </q-timeline-entry>
+                            </template>
 
-                            </q-timeline>
-                        </div>
+                        </q-timeline>
 
                     </div>
 
@@ -181,7 +197,14 @@
                 },
                 loadingCourses   : false,
                 loadingPositions : false,
-                positions        : []
+                positions        : [],
+                strengths        : [
+                    { title : 'Backend', value : 80 },
+                    { title : 'Frontend', value : 75 },
+                    { title : 'Usability', value : 80 },
+                    { title : 'Strategy', value : 90 },
+                    { title : 'Management', value : 65 },
+                ]
             }
         },
         methods :

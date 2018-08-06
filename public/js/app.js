@@ -135,6 +135,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -308,6 +312,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -322,7 +342,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             },
             loadingCourses: false,
             loadingPositions: false,
-            positions: []
+            positions: [],
+            strengths: [{ title: 'Backend', value: 80 }, { title: 'Frontend', value: 75 }, { title: 'Usability', value: 80 }, { title: 'Strategy', value: 90 }, { title: 'Management', value: 65 }]
         };
     },
 
@@ -684,7 +705,58 @@ var render = function() {
                       color: "#ccc",
                       "background-color": "#ccc"
                     }
-                  })
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row justify-between" },
+                    [
+                      _vm._l(_vm.strengths, function(strength) {
+                        return [
+                          _c(
+                            "div",
+                            { staticClass: "col-sm-2" },
+                            [
+                              _c(
+                                "q-knob",
+                                {
+                                  staticStyle: {
+                                    "font-size": "0.5em",
+                                    "font-variant": "all-small-caps"
+                                  },
+                                  attrs: {
+                                    min: "0",
+                                    max: "100",
+                                    "line-width": "6px",
+                                    size: "100px",
+                                    color: "grey-9",
+                                    readonly: ""
+                                  },
+                                  model: {
+                                    value: strength.value,
+                                    callback: function($$v) {
+                                      _vm.$set(strength, "value", $$v)
+                                    },
+                                    expression: "strength.value"
+                                  }
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "q-caption",
+                                    domProps: {
+                                      textContent: _vm._s(strength.title)
+                                    }
+                                  })
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      })
+                    ],
+                    2
+                  )
                 ])
               ])
             ]),
@@ -839,89 +911,79 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-8 q-pa-lg" }, [
-                _c(
-                  "div",
-                  { staticClass: "q-mb-xl" },
-                  [
-                    _c("div", { staticClass: "cv-title title-colour" }, [
-                      _vm._v("WORK")
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", {
-                      staticStyle: {
-                        height: "1px",
-                        border: "none",
-                        color: "#ccc",
-                        "background-color": "#ccc"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "q-timeline",
-                      { staticClass: "q-pl-md", attrs: { color: "secondary" } },
-                      [
-                        _vm._l(_vm.positions, function(position) {
-                          return [
-                            _c(
-                              "q-timeline-entry",
-                              {
-                                attrs: {
-                                  title: position.title,
-                                  subtitle: _vm.dateRange(position),
-                                  side: "right"
-                                }
-                              },
-                              [
+              _c(
+                "div",
+                { staticClass: "col-sm-8 q-px-lg" },
+                [
+                  _c("div", { staticClass: "cv-title title-colour" }, [
+                    _vm._v("WORK")
+                  ]),
+                  _vm._v(" "),
+                  _c("hr", {
+                    staticStyle: {
+                      height: "1px",
+                      border: "none",
+                      color: "#ccc",
+                      "background-color": "#ccc"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "q-timeline",
+                    {
+                      staticClass: "q-pl-md q-pb-none",
+                      attrs: { color: "secondary" }
+                    },
+                    [
+                      _vm._l(_vm.positions, function(position) {
+                        return [
+                          _c(
+                            "q-timeline-entry",
+                            {
+                              attrs: {
+                                title: position.title,
+                                subtitle: _vm.dateRange(position),
+                                side: "right"
+                              }
+                            },
+                            [
+                              _c("div", [
                                 _c("div", [
-                                  _c("div", [
-                                    _c(
-                                      "span",
-                                      {
-                                        staticClass:
-                                          "text-grey-7 text-weight-bolder fade-75"
-                                      },
-                                      [
-                                        _c("span", {
-                                          domProps: {
-                                            textContent: _vm._s(
-                                              position.company
-                                            )
-                                          }
-                                        }),
-                                        _vm._v(
-                                          " ·\n                                            "
-                                        ),
-                                        _c("span", {
-                                          staticClass: "text-grey-5",
-                                          domProps: {
-                                            textContent: _vm._s(
-                                              position.location
-                                            )
-                                          }
-                                        })
-                                      ]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", {
-                                    staticClass: "q-mt-sm text-grey-8",
-                                    domProps: {
-                                      innerHTML: _vm._s(position.description)
-                                    }
-                                  })
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-grey-7 text-weight-bolder fade-75"
+                                    },
+                                    [
+                                      _c("span", {
+                                        domProps: {
+                                          textContent: _vm._s(position.company)
+                                        }
+                                      }),
+                                      _vm._v(
+                                        " ·\n                                            "
+                                      ),
+                                      _c("span", {
+                                        staticClass: "text-grey-5",
+                                        domProps: {
+                                          textContent: _vm._s(position.location)
+                                        }
+                                      })
+                                    ]
+                                  )
                                 ])
-                              ]
-                            )
-                          ]
-                        })
-                      ],
-                      2
-                    )
-                  ],
-                  1
-                )
-              ])
+                              ])
+                            ]
+                          )
+                        ]
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
@@ -1235,14 +1297,24 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-8" }, [
-                _c("p", [_c("br"), _c("br")]),
+              _c("div", { staticClass: "col-sm-8 q-pa-lg" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                        Having been a nerd from an early age, I have 30+ years of experience (25 commercial) in all aspect of computing. During this time I have done everything from building computers/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last 15 years full stack online development utilizing cutting edge backend/frontend frameworks.\n                    "
+                  )
+                ]),
                 _vm._v(" "),
-                _c("p", [_c("br"), _c("br")]),
+                _c("p", [
+                  _vm._v(
+                    "\n                        Given my deep understanding of the the internet, it's core components and how it hangs together as well as having witnessed its evolution from 1990 (early access via Uninet), I have the ability to predict its trajectory with more certainty and thus select technologies and strategies that have a high probability of success.\n                    "
+                  )
+                ]),
                 _vm._v(" "),
-                _c("p", [_c("br"), _c("br")]),
-                _vm._v(" "),
-                _c("p", [_c("br"), _c("br")]),
+                _c("p", [
+                  _vm._v(
+                    "\n                        I pride myself on avoiding fads and ensuring the correct strategy is selected, utilising the right tools that fit both the budget and fulfil the requirement( not the possibility ), yet still provide an upgrade path to scale.\n                    "
+                  )
+                ]),
                 _vm._v(" "),
                 _c("div", [
                   _c("img", {
