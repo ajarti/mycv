@@ -1,15 +1,7 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+// ---------------------- GENERAL ROUTES -------------------------------------- //
 
 Route::get('/', function () {
     return view('app');
@@ -17,4 +9,24 @@ Route::get('/', function () {
 
 Route::get('/privacy', function () {
     return view('privacy');
+});
+
+// ---------------------- API ROUTES ------------------------------------------ //
+
+Route::group(['prefix' => 'api'], function () {
+
+    Route::post('/positions', 'Api\PositionController@positions');
+
+    // Protected routes.
+    Route::group(['middleware' => 'auth'], function () {
+
+
+    });
+
+});
+
+// ---------------------- SIMPLE TEST ROUTES ---------------------------------- //
+
+Route::get('test', function () {
+    return \App\Models\Position::all();
 });

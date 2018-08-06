@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWorkHistoryTable extends Migration
+class CreatePositionsTable extends Migration
 {
 
     /**
@@ -14,7 +14,7 @@ class CreateWorkHistoryTable extends Migration
     public function up()
     {
 
-        Schema::create('work_history', function (Blueprint $table) {
+        Schema::create('positions', function (Blueprint $table) {
 
             // Keys
             $table->increments('id');
@@ -48,7 +48,7 @@ class CreateWorkHistoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_history');
+        Schema::dropIfExists('positions');
     }
 
 }

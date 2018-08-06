@@ -76,65 +76,30 @@
                     </div>
                     <div class="col-sm-8 q-pa-lg">
 
+                        <!--POSITIONS-->
                         <div class="q-mb-xl">
                             <div class="cv-title title-colour">WORK</div>
                             <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
                             <q-timeline class="q-pl-md" color="secondary">
 
-                                <q-timeline-entry
-                                        title="Managing Member"
-                                        subtitle="Current"
-                                        side="right"
-                                >
-                                    <div>
+                                <template v-for="position in positions">
+                                    <q-timeline-entry
+                                            :title="position.title"
+                                            :subtitle="dateRange(position)"
+                                            side="right"
+                                    >
                                         <div>
+                                            <div>
                                             <span class="text-grey-7 text-weight-bolder q-timeline-place">
-                                                Lodgestaff.com &middot;
-                                                <span class="text-grey-5">Cape Town, Western Cape, South Africa</span>
+                                                <span v-text="position.company"></span> &middot;
+                                                <span class="text-grey-5" v-text="position.location"></span>
                                             </span>
+                                            </div>
+                                            <div class="q-mt-sm" v-html="position.description">
+                                            </div>
                                         </div>
-                                        <div class="q-mt-sm">
-                                            <p>
-                                                Lodgestaff.com was started as a side project with latent staff time while IT Director / 50% Owner at Clickthinking.com (now iProspect South Africa). The primary purpose of the site was to service the recruiting needs of the lodge industry in Africa, but rapidly grew into the favourite job board of the hospitality industry.
-                                            </p>
-                                            <p>
-                                                I was initially responsible for the technical design and build of the job board and after taking it over full time in 2010 I have been responsible for the running of the business covering both technical management and general management.
-                                            </p>
-                                        </div>
-
-                                    </div>
-                                </q-timeline-entry>
-
-                                <q-timeline-entry
-                                        title="Event Title"
-                                        subtitle="February 22, 1986"
-                                        side="right"
-                                >
-                                    <div>
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                </q-timeline-entry>
-
-                                <q-timeline-entry
-                                        title="Event Title"
-                                        subtitle="February 22, 1986"
-                                        side="right"
-                                >
-                                    <div>
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                </q-timeline-entry>
-
-                                <q-timeline-entry
-                                        title="Event Title"
-                                        subtitle="February 22, 1986"
-                                        side="right"
-                                >
-                                    <div>
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                </q-timeline-entry>
-
+                                    </q-timeline-entry>
+                                </template>
 
                             </q-timeline>
                         </div>
@@ -149,11 +114,14 @@
 </template>
 
 <script>
+    import HelperMixins from '../helper-mixins';
+
     export default {
+        mixins  : [HelperMixins],
         data()
         {
             return {
-                details : {
+                details          : {
                     personal : [
                         { title : 'Name', value : 'David Murray' },
                         { title : 'Nationality', value : 'South African' },
@@ -167,17 +135,45 @@
                         { title : 'Skype', value : 'david.murray' },
                         { title : 'Address', value : '9 Regiment, Bellville<br/>Cape Town, 7530<br/>South Africa' },
                     ]
-                }
+                },
+                loadingPositions : false,
+                positions        : []
             }
         },
         methods :
             {
-                goLinkedIn(){
+                dateRange(position)
+                {
+                    var self     = this;
+                    var position = position || null;
+                    if ( _.isNull(position) ) return '';
+                    return 'Calcinng ...';
+
+                },
+                goLinkedIn()
+                {
                     top.location.href = 'https://www.linkedin.com/in/davidseanmurray/';
-                }
+                },
+                loadPositions()
+                {
+                    var self = this;
+                    self.fetch({
+                        url     : '/api/positions',
+                        data    : {},
+                        success : function(response){
+                            var response = response || {};
+                            if ( _.has(response, 'data.positions') && _.isArray(response.data.positions) && !_.isEmpty(response.data.positions) ) {
+                                self.positions = response.data.positions;
+                            }
+                        },
+                        flag    : 'loadingPositions'
+                    });
+                },
             },
         mounted()
         {
+            var self = this;
+            self.loadPositions();
             console.log('Component mounted.')
         }
     }

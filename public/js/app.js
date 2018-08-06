@@ -149,41 +149,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helper_mixins__ = __webpack_require__("./resources/assets/js/helper-mixins.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helper_mixins___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__helper_mixins__);
 //
 //
 //
@@ -300,22 +267,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    mixins: [__WEBPACK_IMPORTED_MODULE_0__helper_mixins___default.a],
     data: function data() {
         return {
             details: {
                 personal: [{ title: 'Name', value: 'David Murray' }, { title: 'Nationality', value: 'South African' }, { title: 'Relationship', value: 'Married' }, { title: 'Birthday', value: '2 June 1972' }, { title: 'Languages', value: 'English, Afrikaans' }],
                 contact: [{ title: 'Email', value: 'david.murray@ajarti.com' }, { title: 'Phone', value: '+27 (0)83 759 7724' }, { title: 'Skype', value: 'david.murray' }, { title: 'Address', value: '9 Regiment, Bellville<br/>Cape Town, 7530<br/>South Africa' }]
-            }
+            },
+            loadingPositions: false,
+            positions: []
         };
     },
 
     methods: {
+        dateRange: function dateRange(position) {
+            var self = this;
+            var position = position || null;
+            if (_.isNull(position)) return '';
+            return 'Calcinng ...';
+        },
         goLinkedIn: function goLinkedIn() {
             top.location.href = 'https://www.linkedin.com/in/davidseanmurray/';
+        },
+        loadPositions: function loadPositions() {
+            var self = this;
+            self.fetch({
+                url: '/api/positions',
+                data: {},
+                success: function success(response) {
+                    var response = response || {};
+                    if (_.has(response, 'data.positions') && _.isArray(response.data.positions) && !_.isEmpty(response.data.positions)) {
+                        self.positions = response.data.positions;
+                    }
+                },
+                flag: 'loadingPositions'
+            });
         }
     },
     mounted: function mounted() {
+        var self = this;
+        self.loadPositions();
         console.log('Component mounted.');
     }
 });
@@ -792,109 +786,62 @@ var render = function() {
                       "q-timeline",
                       { staticClass: "q-pl-md", attrs: { color: "secondary" } },
                       [
-                        _c(
-                          "q-timeline-entry",
-                          {
-                            attrs: {
-                              title: "Managing Member",
-                              subtitle: "Current",
-                              side: "right"
-                            }
-                          },
-                          [
-                            _c("div", [
-                              _c("div", [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "text-grey-7 text-weight-bolder q-timeline-place"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Lodgestaff.com ·\n                                            "
-                                    ),
-                                    _c("span", { staticClass: "text-grey-5" }, [
-                                      _vm._v(
-                                        "Cape Town, Western Cape, South Africa"
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "q-mt-sm" }, [
-                                _c("p", [
-                                  _vm._v(
-                                    "\n                                            Lodgestaff.com was started as a side project with latent staff time while IT Director / 50% Owner at Clickthinking.com (now iProspect South Africa). The primary purpose of the site was to service the recruiting needs of the lodge industry in Africa, but rapidly grew into the favourite job board of the hospitality industry.\n                                        "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("p", [
-                                  _vm._v(
-                                    "\n                                            I was initially responsible for the technical design and build of the job board and after taking it over full time in 2010 I have been responsible for the running of the business covering both technical management and general management.\n                                        "
-                                  )
+                        _vm._l(_vm.positions, function(position) {
+                          return [
+                            _c(
+                              "q-timeline-entry",
+                              {
+                                attrs: {
+                                  title: position.title,
+                                  subtitle: _vm.dateRange(position),
+                                  side: "right"
+                                }
+                              },
+                              [
+                                _c("div", [
+                                  _c("div", [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "text-grey-7 text-weight-bolder q-timeline-place"
+                                      },
+                                      [
+                                        _c("span", {
+                                          domProps: {
+                                            textContent: _vm._s(
+                                              position.company
+                                            )
+                                          }
+                                        }),
+                                        _vm._v(
+                                          " ·\n                                            "
+                                        ),
+                                        _c("span", {
+                                          staticClass: "text-grey-5",
+                                          domProps: {
+                                            textContent: _vm._s(
+                                              position.location
+                                            )
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", {
+                                    staticClass: "q-mt-sm",
+                                    domProps: {
+                                      innerHTML: _vm._s(position.description)
+                                    }
+                                  })
                                 ])
-                              ])
-                            ])
+                              ]
+                            )
                           ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "q-timeline-entry",
-                          {
-                            attrs: {
-                              title: "Event Title",
-                              subtitle: "February 22, 1986",
-                              side: "right"
-                            }
-                          },
-                          [
-                            _c("div", [
-                              _vm._v(
-                                "\n                                    Lorem ipsum dolor sit amet.\n                                "
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "q-timeline-entry",
-                          {
-                            attrs: {
-                              title: "Event Title",
-                              subtitle: "February 22, 1986",
-                              side: "right"
-                            }
-                          },
-                          [
-                            _c("div", [
-                              _vm._v(
-                                "\n                                    Lorem ipsum dolor sit amet.\n                                "
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "q-timeline-entry",
-                          {
-                            attrs: {
-                              title: "Event Title",
-                              subtitle: "February 22, 1986",
-                              side: "right"
-                            }
-                          },
-                          [
-                            _c("div", [
-                              _vm._v(
-                                "\n                                    Lorem ipsum dolor sit amet.\n                                "
-                              )
-                            ])
-                          ]
-                        )
+                        })
                       ],
-                      1
+                      2
                     )
                   ],
                   1
@@ -1324,6 +1271,216 @@ if (false) {(function () {
 
 module.exports = Component.exports
 
+
+/***/ }),
+
+/***/ "./resources/assets/js/helper-mixins.js":
+/***/ (function(module, exports) {
+
+module.exports = {
+    computed: {},
+    data: function data() {
+        return {
+            serverReturned: true
+        };
+    },
+
+    methods: {
+        fetch: function fetch(configIn) {
+            var self = this;
+            var config = configIn || null;
+            if (_.isNull(config)) return;
+
+            window.log('helper-mixins.fetch: Calling server with data:', config);
+
+            // Setup method
+            var method = _.has(config, 'method') && !_.isEmpty(config.method) ? config.method : 'post';
+
+            // Stop multi submissions.
+            if (_.has(config, 'flag') && self[config.flag]) {
+                return; // in-progress
+            } else {
+                self[config.flag] = true;
+            }
+
+            // Default success callback.
+            var onSuccess = config.success || function (response) {};
+
+            // Default error callback.
+            var onError = config.error || function (response) {};
+
+            // Call Server ...
+            self.serverReturned = false;
+            window.axios[method](config.url, config.data).then(function (success) {
+                window.log('helper-mixins.fetch: Success Response:', success);
+                if (_.has(success, 'data')) {
+                    self.processMessages(success.data);
+                }
+                onSuccess(success);
+            }).catch(function (error) {
+                window.log('helper-mixins.fetch: Error Response:', error);
+                if (_.has(error, 'response.data')) {
+                    self.processMessages(error.response.data);
+                }
+                onError(error);
+            }).then(function () {
+                window.log('helper-mixins.fetch: Always');
+                self[config.flag] = false;
+                self.serverReturned = true;
+            });
+        },
+        getBooleanValue: function getBooleanValue(ref) {
+            var self = this;
+            var ref = ref || null;
+
+            if (_.isNull(ref) || !_.isString(ref)) {
+                window.log('getBooleanValue: bad string reference.');
+                return '';
+            }
+
+            if (!_.has(self, ref)) {
+                window.log('getBooleanValue: self.' + ref + ' does not exist.');
+                return '';
+            }
+
+            return _.get(self, ref) == 'yes' ? 1 : 0;
+        },
+        getNumericValue: function getNumericValue(ref) {
+            var self = this;
+            var ref = ref || null;
+            if (_.isNull(ref) || !_.isString(ref)) {
+                window.log('getNumericValue: bad string reference.');
+                return '';
+            }
+            if (!_.has(self, ref)) {
+                window.log('getNumericValue: self.' + ref + ' does not exist.');
+                return '';
+            }
+            return _.toNumber(_.get(self, ref));
+        },
+        getStringValue: function getStringValue(ref) {
+            var self = this;
+            var ref = ref || null;
+            if (_.isNull(ref) || !_.isString(ref)) {
+                window.log('getStringValue: bad string reference.');
+                return '';
+            }
+            if (!_.has(self, ref)) {
+                window.log('getStringValue: self.' + ref + ' does not exist.');
+                return '';
+            }
+            return _.get(self, ref);
+        },
+        isYes: function isYes(value) {
+            var self = this;
+            var value = value || false;
+            return _.isEqual(_.toLower(value), 'yes');
+        },
+        notify: function notify(message, detail, messageType) {
+            var self = this;
+            var message = message || '';
+            var detail = detail || '';
+            var messageType = messageType || 'info';
+            if (_.isEmpty(message)) return false;
+            self.$q.notify({
+                message: message,
+                timeout: 5000,
+                type: messageType,
+                detail: detail,
+                position: 'top'
+
+            });
+        },
+        processMessages: function processMessages(responseIn) {
+            var self = this;
+
+            // Default and check for data.
+            var response = responseIn || null;
+            if (_.isNull(response)) return;
+
+            window.log('helper-mixins.processMessages: Running with:', response);
+
+            // Check for general messages.
+            if (_.has(response, 'messages')) {
+                _.each(response.messages, function (messages, key) {
+                    var message = _.isArray(messages) ? messages.join(', ') : messages;
+
+                    switch (key) {
+                        case 'alert-error':
+                            self.notify(message, '', 'warning');
+                            break;
+
+                        case 'alert-info':
+                            self.notify(message, '', 'info');
+                            break;
+
+                        case 'alert-success':
+                            self.notify(message, '', 'positive');
+                            break;
+                    }
+                });
+            }
+        },
+        setValue: function setValue(obj, fields, value) {
+            var self = this;
+            var fields = fields || null;
+            var obj = obj || self;
+            var value = value || '';
+
+            if (!_.isObject(obj)) {
+                window.log('Cannot set fields to bad object.');
+                return;
+            }
+
+            if (_.isNull(value) || _.isNull(fields)) {
+                window.log('Cannot set fields with bad params.');
+                return;
+            }
+
+            // Check for fields that is an index (collection update)
+            if (_.isNumber(fields)) {
+                var index = fields; // Just for readability.
+                Vue.set(obj, index, value);
+                return self;
+            }
+
+            // Check for multi-set.
+            fields = _.isArray(fields) ? fields : [fields];
+            _.each(fields, function (field) {
+                if (_.isString(field)) {
+                    Vue.set(obj, field, value);
+                }
+            });
+            return self;
+        },
+        toggle: function toggle(ref) {
+            var self = this;
+            var ref = ref || null;
+            if (_.isNull(ref)) return;
+            if (_.has(self, ref)) {
+                _.set(self, ref, !_.get(self, ref));
+            }
+        },
+
+        updateList: function updateList(collection, item, compareKey) {
+            var self = this;
+            var key = compareKey || 'id';
+            var found = false;
+            window.log('helper-mixins:updateList called with ', collection, item, compareKey);
+            _.forEach(collection, function (collectionItem, index) {
+                if (_.isEqual(_.toString(collectionItem[key]), _.toString(item[key]))) {
+                    self.setValue(collection, index, item);
+                    found = true;
+                }
+            });
+
+            // Add to collection if not found for update.
+            if (!found) {
+                collection.unshift(item);
+            }
+        }
+    }
+};
 
 /***/ }),
 
