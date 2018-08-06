@@ -16,6 +16,7 @@ Route::get('/privacy', function () {
 Route::group(['prefix' => 'api'], function () {
 
     Route::post('/positions', 'Api\PositionController@positions');
+    Route::post('/courses', 'Api\CourseController@courses');
 
     // Protected routes.
     Route::group(['middleware' => 'auth'], function () {

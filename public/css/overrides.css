@@ -28,7 +28,8 @@
 }
 
 #app .page-bg {
-    background-color: rgba(244, 246, 248, 0.60);
+    /*background-color: rgba(244, 246, 248, 0.60);*/
+    background-color: rgba(247, 255, 0, 0.02);
 }
 
 #app .pointer {
@@ -49,6 +50,10 @@
 
 #app .q-layout-drawer-left {
     box-shadow: none;
+}
+
+#app .q-timeline-content {
+    padding-bottom: 50px;
 }
 
 #app .q-timeline-title {

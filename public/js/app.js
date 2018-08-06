@@ -267,6 +267,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -274,10 +315,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mixins: [__WEBPACK_IMPORTED_MODULE_0__helper_mixins___default.a],
     data: function data() {
         return {
+            courses: [],
             details: {
                 personal: [{ title: 'Name', value: 'David Murray' }, { title: 'Nationality', value: 'South African' }, { title: 'Relationship', value: 'Married' }, { title: 'Birthday', value: '2 June 1972' }, { title: 'Languages', value: 'English, Afrikaans' }],
                 contact: [{ title: 'Email', value: 'david.murray@ajarti.com' }, { title: 'Phone', value: '+27 (0)83 759 7724' }, { title: 'Skype', value: 'david.murray' }, { title: 'Address', value: '9 Regiment, Bellville<br/>Cape Town, 7530<br/>South Africa' }]
             },
+            loadingCourses: false,
             loadingPositions: false,
             positions: []
         };
@@ -309,6 +352,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         goLinkedIn: function goLinkedIn() {
             top.location.href = 'https://www.linkedin.com/in/davidseanmurray/';
         },
+        loadCourses: function loadCourses() {
+            var self = this;
+            self.fetch({
+                url: '/api/courses',
+                data: {},
+                success: function success(response) {
+                    var response = response || {};
+                    if (_.has(response, 'data.courses') && _.isArray(response.data.courses) && !_.isEmpty(response.data.courses)) {
+                        self.courses = response.data.courses;
+                    }
+                },
+                flag: 'loadingCourses'
+            });
+        },
         loadPositions: function loadPositions() {
             var self = this;
             self.fetch({
@@ -326,6 +383,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     mounted: function mounted() {
         var self = this;
+        self.loadCourses();
         self.loadPositions();
         console.log('Component mounted.');
     }
@@ -852,6 +910,107 @@ var render = function() {
                                       innerHTML: _vm._s(position.description)
                                     }
                                   })
+                                ])
+                              ]
+                            )
+                          ]
+                        })
+                      ],
+                      2
+                    )
+                  ],
+                  1
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "col-sm-4 q-pa-lg",
+                  staticStyle: { "background-color": "rgb(69,166,245,0.05)" }
+                },
+                [
+                  _c("div", { staticClass: "q-mb-xl" }, [
+                    _c("div", { staticClass: "cv-title title-colour" }, [
+                      _vm._v("XXX")
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", {
+                      staticStyle: {
+                        height: "1px",
+                        border: "none",
+                        color: "#ccc",
+                        "background-color": "#ccc"
+                      }
+                    })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-8 q-pa-lg" }, [
+                _c(
+                  "div",
+                  { staticClass: "q-mb-xl" },
+                  [
+                    _c("div", { staticClass: "cv-title title-colour" }, [
+                      _vm._v("EDUCATION")
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", {
+                      staticStyle: {
+                        height: "1px",
+                        border: "none",
+                        color: "#ccc",
+                        "background-color": "#ccc"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "q-timeline",
+                      { staticClass: "q-pl-md", attrs: { color: "secondary" } },
+                      [
+                        _vm._l(_vm.courses, function(course) {
+                          return [
+                            _c(
+                              "q-timeline-entry",
+                              {
+                                attrs: {
+                                  title: course.qualification,
+                                  subtitle: _vm.dateRange(course),
+                                  side: "right"
+                                }
+                              },
+                              [
+                                _c("div", [
+                                  _c("div", [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "text-grey-7 text-weight-bolder fade-75"
+                                      },
+                                      [
+                                        _c("span", {
+                                          domProps: {
+                                            textContent: _vm._s(
+                                              course.institution
+                                            )
+                                          }
+                                        }),
+                                        _vm._v(
+                                          " ·\n                                                "
+                                        ),
+                                        _c("span", {
+                                          staticClass: "text-grey-5",
+                                          domProps: {
+                                            textContent: _vm._s(course.location)
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ])
                                 ])
                               ]
                             )

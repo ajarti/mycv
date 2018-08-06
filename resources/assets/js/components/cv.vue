@@ -44,6 +44,7 @@
 
                 </div>
 
+
                 <div class="row">
                     <div class="col-sm-4 q-pa-lg" style="background-color: rgb(69,166,245,0.05) ">
                         <div class="q-mb-xl">
@@ -91,7 +92,7 @@
                                         <div>
                                             <div>
                                                 <!--q-timeline-place-->
-                                            <span class="text-grey-7 text-weight-bolder fade-75">
+                                                <span class="text-grey-7 text-weight-bolder fade-75">
                                                 <span v-text="position.company"></span> &middot;
                                                 <span class="text-grey-5" v-text="position.location"></span>
                                             </span>
@@ -108,6 +109,46 @@
                     </div>
 
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-4 q-pa-lg" style="background-color: rgb(69,166,245,0.05) ">
+                        <div class="q-mb-xl">
+                            <div class="cv-title title-colour">XXX</div>
+                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-8 q-pa-lg">
+                        <div class="q-mb-xl">
+                            <div class="cv-title title-colour">EDUCATION</div>
+                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
+                            <q-timeline class="q-pl-md" color="secondary">
+
+                                <template v-for="course in courses">
+                                    <q-timeline-entry
+                                            :title="course.qualification"
+                                            :subtitle="dateRange(course)"
+                                            side="right"
+                                    >
+                                        <div>
+                                            <div>
+                                                <!--q-timeline-place-->
+                                                <span class="text-grey-7 text-weight-bolder fade-75">
+                                                    <span v-text="course.institution"></span> &middot;
+                                                    <span class="text-grey-5" v-text="course.location"></span>
+                                                 </span>
+                                            </div>
+
+                                        </div>
+                                    </q-timeline-entry>
+                                </template>
+
+                            </q-timeline>
+                        </div>
+                    </div>
+
+                </div>
+
             </q-card-main>
         </q-card>
     </q-page>
@@ -122,6 +163,7 @@
         data()
         {
             return {
+                courses          : [],
                 details          : {
                     personal : [
                         { title : 'Name', value : 'David Murray' },
@@ -137,6 +179,7 @@
                         { title : 'Address', value : '9 Regiment, Bellville<br/>Cape Town, 7530<br/>South Africa' },
                     ]
                 },
+                loadingCourses   : false,
                 loadingPositions : false,
                 positions        : []
             }
@@ -164,11 +207,26 @@
                     }
 
                     // Format.
-                    return self.formatAsYearsMonths(startDate, endDate) + ' FROM ' +self.formatDate(startDate,true) + ' - ' + self.formatDate(endDate,true);
+                    return self.formatAsYearsMonths(startDate, endDate) + ' FROM ' + self.formatDate(startDate, true) + ' - ' + self.formatDate(endDate, true);
                 },
                 goLinkedIn()
                 {
                     top.location.href = 'https://www.linkedin.com/in/davidseanmurray/';
+                },
+                loadCourses()
+                {
+                    var self = this;
+                    self.fetch({
+                        url     : '/api/courses',
+                        data    : {},
+                        success : function(response){
+                            var response = response || {};
+                            if ( _.has(response, 'data.courses') && _.isArray(response.data.courses) && !_.isEmpty(response.data.courses) ) {
+                                self.courses = response.data.courses;
+                            }
+                        },
+                        flag    : 'loadingCourses'
+                    });
                 },
                 loadPositions()
                 {
@@ -189,6 +247,7 @@
         mounted()
         {
             var self = this;
+            self.loadCourses();
             self.loadPositions();
             console.log('Component mounted.')
         }
