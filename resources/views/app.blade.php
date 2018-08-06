@@ -26,7 +26,7 @@
                         class="fixed-bottom-right"
                         style="margin: 0 15px 15px 0"
                 >
-                    <q-icon name="keyboard_arrow_up"/>
+                    <q-icon name="fas fa-chevron-up"/>
                 </q-btn>
             </q-page-container>
 

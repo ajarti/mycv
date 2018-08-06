@@ -90,12 +90,13 @@
                                     >
                                         <div>
                                             <div>
-                                            <span class="text-grey-7 text-weight-bolder q-timeline-place">
+                                                <!--q-timeline-place-->
+                                            <span class="text-grey-7 text-weight-bolder fade-75">
                                                 <span v-text="position.company"></span> &middot;
                                                 <span class="text-grey-5" v-text="position.location"></span>
                                             </span>
                                             </div>
-                                            <div class="q-mt-sm" v-html="position.description">
+                                            <div class="q-mt-sm text-grey-8" v-html="position.description">
                                             </div>
                                         </div>
                                     </q-timeline-entry>
@@ -144,11 +145,26 @@
             {
                 dateRange(position)
                 {
-                    var self     = this;
-                    var position = position || null;
+                    var endDate   = moment().unix();
+                    var position  = position || null;
+                    var self      = this;
+                    var startDate = '';
                     if ( _.isNull(position) ) return '';
-                    return 'Calcinng ...';
 
+                    // From.
+                    if ( _.has(position, 'start_date_ts') && self.isTimestamp(position.start_date_ts) ) {
+                        startDate = position.start_date_ts;
+                    } else {
+                        return '';
+                    }
+
+                    // To.
+                    if ( _.has(position, 'end_date_ts') && self.isTimestamp(position.end_date_ts) ) {
+                        endDate = position.end_date_ts
+                    }
+
+                    // Format.
+                    return self.formatAsYearsMonths(startDate, endDate) + ' FROM ' +self.formatDate(startDate,true) + ' - ' + self.formatDate(endDate,true);
                 },
                 goLinkedIn()
                 {

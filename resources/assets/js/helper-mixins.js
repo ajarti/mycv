@@ -57,6 +57,24 @@ module.exports = {
                 });
 
         },
+        formatAsYearsMonths(startDate, endDate)
+        {
+            var a     = moment.unix(endDate);
+            var b     = moment.unix(startDate);
+            var years = a.diff(b, 'year');
+            b.add(years, 'years');
+            var months = a.diff(b, 'months');
+            var str    = ((years > 0) ? years + ((years > 1) ? ' Years' : ' Year') : '')
+            str += ((months > 0) ? ((years > 0) ? ' ' : '') + months + ((months > 1) ? ' Months' : ' Month') : '')
+            return str;
+        },
+        formatDate(utsDate, short)
+        {
+            var short = short || false;
+            var self  = this;
+            if ( !self.isTimestamp(utsDate) ) return '';
+            return (short) ? moment.unix(utsDate).format('MMM \'YY') : moment.unix(utsDate).format('MMM YYYY');
+        },
         getBooleanValue(ref)
         {
             var self = this;
@@ -101,6 +119,11 @@ module.exports = {
                 return '';
             }
             return _.get(self, ref);
+        },
+        isTimestamp(timestamp)
+        {
+            var timestamp = timestamp || null;
+            return (!_.isNull(timestamp) && !isNaN(timestamp) && moment.unix(timestamp).isValid());
         },
         isYes(value)
         {

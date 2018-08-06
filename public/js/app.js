@@ -266,6 +266,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -284,10 +285,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         dateRange: function dateRange(position) {
-            var self = this;
+            var endDate = moment().unix();
             var position = position || null;
+            var self = this;
+            var startDate = '';
             if (_.isNull(position)) return '';
-            return 'Calcinng ...';
+
+            // From.
+            if (_.has(position, 'start_date_ts') && self.isTimestamp(position.start_date_ts)) {
+                startDate = position.start_date_ts;
+            } else {
+                return '';
+            }
+
+            // To.
+            if (_.has(position, 'end_date_ts') && self.isTimestamp(position.end_date_ts)) {
+                endDate = position.end_date_ts;
+            }
+
+            // Format.
+            return self.formatAsYearsMonths(startDate, endDate) + ' FROM ' + self.formatDate(startDate, true) + ' - ' + self.formatDate(endDate, true);
         },
         goLinkedIn: function goLinkedIn() {
             top.location.href = 'https://www.linkedin.com/in/davidseanmurray/';
@@ -804,7 +821,7 @@ var render = function() {
                                       "span",
                                       {
                                         staticClass:
-                                          "text-grey-7 text-weight-bolder q-timeline-place"
+                                          "text-grey-7 text-weight-bolder fade-75"
                                       },
                                       [
                                         _c("span", {
@@ -830,7 +847,7 @@ var render = function() {
                                   ]),
                                   _vm._v(" "),
                                   _c("div", {
-                                    staticClass: "q-mt-sm",
+                                    staticClass: "q-mt-sm text-grey-8",
                                     domProps: {
                                       innerHTML: _vm._s(position.description)
                                     }
@@ -1329,6 +1346,22 @@ module.exports = {
                 self.serverReturned = true;
             });
         },
+        formatAsYearsMonths: function formatAsYearsMonths(startDate, endDate) {
+            var a = moment.unix(endDate);
+            var b = moment.unix(startDate);
+            var years = a.diff(b, 'year');
+            b.add(years, 'years');
+            var months = a.diff(b, 'months');
+            var str = years > 0 ? years + (years > 1 ? ' Years' : ' Year') : '';
+            str += months > 0 ? (years > 0 ? ' ' : '') + months + (months > 1 ? ' Months' : ' Month') : '';
+            return str;
+        },
+        formatDate: function formatDate(utsDate, short) {
+            var short = short || false;
+            var self = this;
+            if (!self.isTimestamp(utsDate)) return '';
+            return short ? moment.unix(utsDate).format('MMM \'YY') : moment.unix(utsDate).format('MMM YYYY');
+        },
         getBooleanValue: function getBooleanValue(ref) {
             var self = this;
             var ref = ref || null;
@@ -1370,6 +1403,10 @@ module.exports = {
                 return '';
             }
             return _.get(self, ref);
+        },
+        isTimestamp: function isTimestamp(timestamp) {
+            var timestamp = timestamp || null;
+            return !_.isNull(timestamp) && !isNaN(timestamp) && moment.unix(timestamp).isValid();
         },
         isYes: function isYes(value) {
             var self = this;
