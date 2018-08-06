@@ -1,0 +1,77 @@
+#app .clear {
+    clear: both;
+}
+
+#app .cv-title {
+    font-size: 1.1em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#app .fade-50 {
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#app .fade-75 {
+    opacity: 0.25 !important;
+    filter: alpha(opacity=25);
+}
+
+#app .hoverable:hover {
+    background-color: #F8F8F8 !important;
+}
+
+#app .max-width-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#app .page-bg {
+    background-color: rgba(244, 246, 248, 0.60);
+}
+
+#app .pointer {
+    cursor: pointer !important;
+}
+
+#app .position-relative {
+    position: relative;
+}
+
+#app .q-icon.fa-xs {
+    font-size: 1em;
+}
+
+#app .q-field-content {
+    min-height: 66px !important; /*Allow for error and no jumping.*/
+}
+
+#app .q-layout-drawer-left {
+    box-shadow: none;
+}
+
+#app .q-timeline-title {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #00465c;
+    letter-spacing: 1px;
+}
+
+#app .q-timeline-place {
+    font-variant: all-small-caps;
+}
+
+#app .thin-border {
+    border: 1px solid #EEE;
+}
+
+#app .title-colour {
+    color: #00465c;
+}
+
+#app .whitespace-text {
+    line-height: 1.75em;
+}
