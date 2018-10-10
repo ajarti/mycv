@@ -4,11 +4,17 @@
 // ---------------------- GENERAL ROUTES -------------------------------------- //
 
 Route::get('/', function () {
-    return view('app');
-});
 
-Route::get('/privacy', function () {
-    return view('privacy');
+    // Fetch courses to demonstrate injection method.
+    $courses = \App\Models\Course::all();
+
+    // Inject js data.
+    \JavaScript::put([
+        'courses' => \App\Http\Resources\CourseTransformer::collection($courses)
+    ]);
+
+    // Return the default view.
+    return view('app');
 });
 
 // ---------------------- API ROUTES ------------------------------------------ //
@@ -16,18 +22,5 @@ Route::get('/privacy', function () {
 Route::group(['prefix' => 'api'], function () {
 
     Route::post('/positions', 'Api\PositionController@positions');
-    Route::post('/courses', 'Api\CourseController@courses');
 
-    // Protected routes.
-    Route::group(['middleware' => 'auth'], function () {
-
-
-    });
-
-});
-
-// ---------------------- SIMPLE TEST ROUTES ---------------------------------- //
-
-Route::get('test', function () {
-    return \App\Models\Position::all();
 });

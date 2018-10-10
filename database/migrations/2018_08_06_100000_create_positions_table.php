@@ -23,6 +23,7 @@ class CreatePositionsTable extends Migration
             $table->string('title', 75)->nullable()->default('');
             $table->string('company', 75)->nullable()->default('');
             $table->string('location', 75)->nullable()->default('');
+            $table->string('thumb', 75)->nullable()->default('');
             $table->mediumText('description')->nullable();
 
             // Flags

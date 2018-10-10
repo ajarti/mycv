@@ -1,15 +1,15 @@
 let mix = require('laravel-mix');
+mix
+    /* CSS */
+    .sass('resources/assets/sass/main.scss', 'public/css/dashmix.css').version()
+    .sass('resources/assets/sass/dashmix/themes/xmodern.scss', 'public/css/themes/').version()
+    .copy('resources/assets/css/overrides.css', 'public/css/overrides.css').version()
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+    /* JS */
+    .js('resources/assets/js/app.js', 'public/js').version()
+    .js('resources/assets/dashmix/app.js', 'public/js/dashmix.app.js').version()
 
-mix.js('resources/assets/js/app.js', 'public/js').version();
-mix.copy('resources/assets/css/overrides.css', 'public/css/overrides.css').version();
+    /* Options */
+    .options({
+        processCssUrls : false
+    });

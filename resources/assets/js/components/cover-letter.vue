@@ -1,77 +1,113 @@
 <template>
 
-    <q-page class="q-pa-xl">
-        <q-card class="bg-white" style="max-width: 1000px">
-            <q-card-media>
-                <div class="row items-stretch" style="background: url('/header-bg/cv-header-bg.jpg') no-repeat; height:200px">
-                    <div class="col-sm-2">&nbsp;</div>
-                    <div class="col-sm-1">
-                        <div class="text-center position-relative" style="height:65%; background-color: rgba(247,255,0, 0.75);">
-                            <img style="left:0; right:0; position: absolute; bottom: 10px; margin:auto;" src="/full-stack-alt.png" alt="fullstack" width="60px" height="60px">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 q-pl-lg self-center text-white">
-                        <div>
-                            <span style="font-family: 'Montserrat'; font-weight: 400; font-size: 2em; letter-spacing: 3px">DAVID</span>
-                            <span style="font-family: 'Montserrat'; font-weight: 800; font-size: 2em; letter-spacing: 3px; margin-left: 10px">MURRAY</span>
-                        </div>
-                        <div style="font-weight: 500; font-style: italic; font-size: 0.8em; letter-spacing: 1px; margin: 5px 0 0 5px ; opacity: 0.45">FULLSTACK DEVELOPER</div>
-                    </div>
-                    <div class="col-sm-3">&nbsp;</div>
-                </div>
-            </q-card-media>
-            <q-card-main class="q-pa-none">
-                <div class="row">
-                    <div class="col-sm-4 q-pa-xl" style="background-color: rgb(69,166,245,0.05) ">
-                        <div class="q-mb-xl">
-                            <div class="cv-title title-colour">TO</div>
-                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
-                            <div class="q-pt-sm text-weight-bold">BGBO Co</div>
-                            <div class="q-pt-sm text-weight-light text-faded">Hiring Department</div>
-                        </div>
-                        <div class="q-mb-xl">
-                            <div class="cv-title title-colour">POSITION</div>
-                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
-                            <div class="q-pt-sm text-weight-light text-faded">Laravel Developer</div>
-                        </div>
-                        <div class="q-mb-xl">
-                            <div class="cv-title title-colour">DATE</div>
-                            <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;"/>
-                            <div class="q-pt-sm text-weight-light text-faded">5 August 2018</div>
-                        </div>
+    <div>
 
+        <!-- Page Content -->
+        <div class="row no-gutters flex-md-10-auto">
+            <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-3 bg-gray-light">
+                <div class="content">
+
+                    <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
+                        <div class="block-header bg-gd-sun-op">
+                            <h3 class="block-title">TO</h3>
+                        </div>
+                        <div class="block-content">
+                            <p>
+                                HUMAN RESOURCES
+                                <br>
+                                <small class="text-gray">Hiring Manager</small>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-sm-8 q-pa-lg">
+
+                    <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
+                        <div class="block-header bg-gd-sun-op">
+                            <h3 class="block-title">POSITION</h3>
+                        </div>
+                        <div class="block-content">
+                            <p>
+                                Senior Developer
+                                <br>
+                                <small class="text-gray">Laravel Focused</small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
+                        <div class="block-header bg-gd-sun-op">
+                            <h3 class="block-title">DATE</h3>
+                        </div>
+                        <div class="block-content">
+                            <p>
+                                5 August 2018
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
+                        <div class="block-header bg-gd-sun-op">
+                            <h3 class="block-title">LINKS</h3>
+                        </div>
+                        <div class="block-content">
+                            <p>
+                                View my <router-link to="/resume" class="link-fx text-warning">resume</router-link>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-lg-8 col-xl-9">
+                <div class="content pb-5">
+                    <div class="block-content" data-aos="fade-left" data-aos-delay="50">
                         <p>
-                            Having been a nerd from an early age, I have 30+ years of experience (25 commercial) in all aspect of computing. During this time I have done everything from building computers/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last 15 years full stack online development utilizing cutting edge backend/frontend frameworks.
+                            To whom it may concern,
+                        </p>
+
+                        <p>
+                            I am a Full Stack Developer with ~20 years development experience. I currently specialise in Laravel coupled primarily with Vue on the frontend.
                         </p>
                         <p>
-                            Given my deep understanding of the the internet, it's core components and how it hangs together as well as having witnessed its evolution from 1990 (early access via Uninet), I have the ability to predict its trajectory with more certainty and thus select technologies and strategies that have a high probability of success.
+                            I have 30+ years IT experience in total (25 commercial) having started at the early age of 9 as your typical nerd doing what he can to get games to work.
                         </p>
                         <p>
-                            I pride myself on avoiding fads and ensuring the correct strategy is selected, utilising the right tools that fit both the budget and fulfil the requirement( not the possibility ), yet still provide an upgrade path to scale.
+                            In my career thus far, I have done everything from building computers/servers/clusters from bare metal and managing them, designing and constructing networks(to WAN level) and for the last 20 years, full stack online development utilizing cutting edge backend/frontend frameworks.
                         </p>
-                        <div>
+                        <p>
+                            I owned and run a Digital Agency for 10 years and have an intricate understanding of client interaction from initial strategy to managing development and delivery, having said this my preference is development.
+                        </p>
+                        <p>
+                            I have a deep understanding of the internet, it's core components and how everything hangs together. I have witnessed the Internet's evolution from the early ‘90s and as a result I am able to select technologies and strategies that match the client’s needs and help maximize the project's probability of success.
+                            I pride myself on avoiding fads and ensuring that the correct strategy is selected, utilising the right tools that fit both the budget and fulfil the requirement.
+                            I am a fan of <a href="http://theleanstartup.com/" target="_blank" class="link-fx text-warning">The Lean Startup</a> methodology and strongly believe in small iterations to gauge feasibility as well as helping manage client expectations and budgets. I am also a huge fan of Basecamp's <a href="https://basecamp.com/books/rework" target="_blank" class="link-fx text-warning">Rework</a> principles.
+                        </p>
+                        <p>
+                            I found your advert very appealing as I feel very strongly about work life balance. Balance was the driving force behind leaving my agency when my son was born, I had lost contact with my love of development and was spending all my time in management. I think well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
+                        </p>
+                        <p>
+                            I am looking to relocate with my family to the UK or possibly Central Europe and with the current political situation and constant economic downgrades by the ratings agencies, our currency has degraded to the point where the exchange rate would not allow me to do this easily. This is why I am now looking for an income source from a International base while retaining my independence.
+                        </p>
+                        <p>
+                            I am a native English speaker living in Cape Town (South Africa) UTC+2.
+                        </p>
+                        <p>
+                            Please feel free to review my <router-link to="/resume" class="link-fx text-warning">resume</router-link> which is part of this simple SPA and contains more detail on my employment history and skill set. Most of my recent code is closed source, so I developed this resume as a example of a Lavavel/Vue app. It’s deployed live to a Digitalocean server via Forge. If you would like to review the source code, please send me an email address that I can add to the collaborators of this project.
+                        </p>
+                        <div>Yours sincerely,</div>
+                        <div class="my-2 d-inline-block">
                             <img src="signature.png" border="0" height="89" width="150">
+                            <hr class="mb-1">
+                            <div>David Murray</div>
                         </div>
-                        <div class="q-mt-md q-mb-xs text-faded">Yours sincerely,</div>
-                        <div class="text-weight-bold">David Murray</div>
-
 
                     </div>
-
                 </div>
-            </q-card-main>
-        </q-card>
-    </q-page>
+            </div>
+        </div>
+    </div>
 
 </template>
 
 <script>
-    export default {
-        mounted()
-        {
-            console.log('Component mounted.')
-        }
-    }
+    export default {}
 </script>

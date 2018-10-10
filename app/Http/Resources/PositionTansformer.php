@@ -16,6 +16,7 @@ class PositionTransformer extends BaseTransformer
             'company'       => $this->company,
             'current'       => $this->toYesNo($this->current),
             'description'   => $this->description,
+            'thumb'         => $this->thumb,
             'end_date_ts'   => $this->toTimestamp($this->end_date_at),
             'location'      => $this->location,
             'start_date_ts' => $this->toTimestamp($this->start_date_at),

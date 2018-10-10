@@ -1,3 +1,5 @@
+// N.B window.log() calls only for development as easy logging, vs devtools, and can be disabled in bootstrap or parsed out with webpack.
+
 module.exports = {
     computed : {},
     data()

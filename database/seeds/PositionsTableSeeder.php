@@ -16,6 +16,7 @@ class PositionsTableSeeder extends MyCVSeeder
                 'company'       => $position['company'],
                 'location'      => $position['location'],
                 'description'   => $position['description'],
+                'thumb'         => $position['thumb'],
                 'current'       => $position['current'],
                 'start_date_at' => $position['start_date_at'],
                 'end_date_at'   => $position['end_date_at'],
