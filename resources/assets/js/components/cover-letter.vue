@@ -39,7 +39,7 @@
                         </div>
                         <div class="block-content">
                             <p>
-                                5 August 2018
+                                10 Oct 2018
                             </p>
                         </div>
                     </div>
