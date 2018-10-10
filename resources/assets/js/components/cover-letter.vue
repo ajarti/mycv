@@ -74,7 +74,7 @@
                             In my career thus far, I have done everything from building computers/servers/clusters from bare metal and managing them, designing and constructing networks(to WAN level) and for the last 20 years, full stack online development utilizing cutting-edge backend/frontend frameworks.
                         </p>
                         <p>
-                            I owned and run a Digital Agency for 10 years and have an intricate understanding of client interaction from initial strategy to managing development and delivery, having said this my preference is development.
+                            I was a partner and IT Director of a digital agency for 10 years and have an good understanding of client interaction from initial strategy to managing development and delivery, having said this my preference is development.
                         </p>
                         <p>
                             I have a deep understanding of the internet, it's core components and how everything hangs together. I have witnessed the Internet's evolution from the early ‘90s and as a result, I am able to select technologies and strategies that match the client’s needs and help maximize the project's probability of success.
@@ -82,10 +82,7 @@
                             I am a fan of <a href="http://theleanstartup.com/" target="_blank" class="link-fx text-warning">The Lean Startup</a> methodology and strongly believe in small iterations to gauge feasibility as well as helping manage client expectations and budgets. I am also a huge fan of Basecamp's <a href="https://basecamp.com/books/rework" target="_blank" class="link-fx text-warning">Rework</a> principles.
                         </p>
                         <p>
-                            I found your advert very appealing as I feel very strongly about work-life balance. Balance was the driving force behind leaving my agency when my son was born, I had lost contact with my love of development and was spending all my time in management. I think well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
-                        </p>
-                        <p>
-                            I am looking to relocate with my family to the UK or possibly Central Europe and with the current political situation and constant economic downgrades by the Rating Agencies, our currency has degraded to the point where the exchange rate would not allow me to do this easily. This is why I am now looking for an income source from an International base while retaining my independence.
+                            I found your advert very appealing as I feel very strongly about work-life balance. Balance was the driving force behind leaving the agency when my son was born, I believe well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
                         </p>
                         <p>
                             I am a native English speaker living in Cape Town (South Africa) UTC+2.
