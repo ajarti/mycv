@@ -99,7 +99,6 @@
                             <hr class="mb-1">
                             <div>David Murray</div>
                         </div>
-
                     </div>
                 </div>
             </div>
