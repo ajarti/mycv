@@ -9,7 +9,7 @@
 
                     <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
                         <div class="block-header bg-gd-sun-op">
-                            <h3 class="block-title">TO</h3>
+                            <h3 class="block-title font-w700">TO</h3>
                         </div>
                         <div class="block-content">
                             <p>
@@ -22,7 +22,7 @@
 
                     <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
                         <div class="block-header bg-gd-sun-op">
-                            <h3 class="block-title">POSITION</h3>
+                            <h3 class="block-title font-w700">POSITION</h3>
                         </div>
                         <div class="block-content">
                             <p>
@@ -35,18 +35,7 @@
 
                     <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
                         <div class="block-header bg-gd-sun-op">
-                            <h3 class="block-title">DATE</h3>
-                        </div>
-                        <div class="block-content">
-                            <p>
-                                10 Oct 2018
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="block block-rounded block-themed" data-aos="fade-right" data-aos-delay="50">
-                        <div class="block-header bg-gd-sun-op">
-                            <h3 class="block-title">LINKS</h3>
+                            <h3 class="block-title font-w700">LINKS</h3>
                         </div>
                         <div class="block-content">
                             <p>
@@ -82,13 +71,13 @@
                             I am a fan of <a href="http://theleanstartup.com/" target="_blank" class="link-fx text-warning">The Lean Startup</a> methodology and strongly believe in small iterations to gauge feasibility as well as helping manage client expectations and budgets. I am also a huge fan of Basecamp's <a href="https://basecamp.com/books/rework" target="_blank" class="link-fx text-warning">Rework</a> principles.
                         </p>
                         <p>
-                            I found your advert very appealing as I feel very strongly about work-life balance. Balance was the driving force behind leaving the agency when my son was born, I believe well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
+                            I found your advert very appealing as I feel very strongly about work-life balance. Balance was the driving force behind leaving my agency when my son was born, I believe well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
                         </p>
                         <p>
                             I am a native English speaker living in Cape Town (South Africa) UTC+2.
                         </p>
                         <p>
-                            Please feel free to review my <router-link to="/resume" class="link-fx text-warning">resume</router-link> which is part of this simple SPA and contains more detail on my employment history and skill set. Most of my recent code is closed source, so I developed this resume as an example of a Lavavel/Vue app. It’s deployed live to a Digitalocean server via Forge. If you would like to review the source code, please send me an email address that I can add to the collaborators of this project.
+                            Please feel free to review my <router-link to="/resume" class="link-fx text-warning">resume</router-link> which is part of this simple SPA and contains more detail on my employment history and skill set. I developed this resume to serve as example code of a Lavavel/Vue app. It’s deployed live to a Digitalocean server via Forge. If you would like to review the source code, please send me an email address that I can add to the collaborators of this project.
                         </p>
                         <div>Yours sincerely,</div>
                         <div class="my-2 d-inline-block">

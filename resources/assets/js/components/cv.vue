@@ -9,8 +9,16 @@
                         <h3 class="block-title font-w700">PROFILE</h3>
                         <hr class="mt-1">
                         <p>
-                            Even though I have a strong all-round skill set, I lean towards backend/frontend (code) development. I have a good graphic eye, but would not consider myself a UI artist, nor would I be comfortable fulfilling that role. My understanding of UX is good and always try to engineer frictionless and intuitive customer journeys. I have management skills, but as a perfectionist, I am not well suited to it at scale as I tend to micromanage, a weakness I am currently
-                            working on. I have good Sysops skills but prefer to outsource this function as it can be very time consuming and requires constant education to stay up to date. With the rapid trajectory of advances just in coding, trying to ride two horses does make sense. It makes far more sense to leave this to experts in this field who can guarantee uptime and free up time to focus on the codebase.
+                            I have 30+ years of experience (25 commercial) in all aspect of IT. During this time I've performed roles covering the building of workstations/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last 18 years, full stack development and web server sysops.
+                        </p>
+                        <p>
+                            I pride myself on avoiding fads and ensuring the correct development strategy is selected, utilizing the right tools to fit both the budget and fulfill the requirements, yet maintaining an eye on the future in order to allow for an upgrade path. I am a huge fan of the Lean Startup strategy, developing in small increments and pivoting when needed based on customer experience and feedback.
+                        </p>
+                        <p>
+                            Having been the IT Director / Lead Dev for an agency for 10 years I understand the importance of managing client expectations and ensuring clarity in communication. I have worked with many leading brands such as Xchanging, BNP Paribas, Mitsubishi, Vodacom, Johnson & Johnson, Taj Hotels, &Beyond (see below ..)
+                        </p>
+                        <p>
+                            My preferred stack is Laravel/Vue and I have a preference for greenfield and product/SaaS based projects.
                         </p>
                         <div class="row" data-aos="fade-up" data-aos-delay="50">
 
@@ -27,7 +35,7 @@
                         </div>
 
                         <!--WORK HISTORY-->
-                        <h3 class="block-title font-w700 mt-5">WORK HISTORY</h3>
+                        <h3 class="block-title font-w700 mt-5">EXPERIENCE</h3>
                         <hr class="mt-1">
                         <ul class="timeline">
                             <template v-for="position in positions">
@@ -143,7 +151,7 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">SKILLS</h3>
+                                <h3 class="block-title font-w700">SKILLS</h3>
                             </div>
                             <div class="block-content">
 
@@ -198,25 +206,56 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">TECHNOLOGIES</h3>
+                                <h3 class="block-title  font-w700">TECHNOLOGIES</h3>
                             </div>
                             <div class="block-content pb-3">
-                                <span class="badge badge-secondary">Laravel</span>
-                                <span class="badge badge-secondary">MySql</span>
-                                <span class="badge badge-secondary">Vue</span>
-                                <span class="badge badge-secondary">Knockout</span>
-                                <span class="badge badge-secondary">Angular</span>
-                                <span class="badge badge-secondary">Networking</span>
-                                <span class="badge badge-secondary">APIs</span>
-                                <span class="badge badge-secondary">SysOps</span>
-                                <span class="badge badge-secondary">Linux</span>
-                                <span class="badge badge-secondary">Micro Controllers</span>
-                                <span class="badge badge-secondary">SEO</span>
-                                <span class="badge badge-secondary">Bootstrap</span>
-                                <span class="badge badge-secondary">Semantic UI</span>
-                                <span class="badge badge-secondary">Basic 3D Modeling</span>
-                                <span class="badge badge-secondary">Photoshop / etc</span>
-                                <span class="badge badge-secondary">Adwords / FB Ads</span>
+                                <h6 class="font-w400 text-gray mb-1 font-size-sm">WEB</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">PHP</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Javascript</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">HTML</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">CSS</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">MySql</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">NoSql</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Vue <small>(primary)</small></span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Laravel <small>(primary)</small></span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">API Integration</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">JS Frameworks</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">PHP Frameworks</span>
+
+                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">SERVER</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Networking</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SysOps</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Linux</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Redis</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Nginx</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Apache</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">GD</span>
+
+                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">DESIGN</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">UX</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">UI</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Photoshop</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Canvas</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Basic 3D Modelling</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Basic CAD</span>
+
+                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">MARKETING</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SEO</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Adwords</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Facebook ADS</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Ad Delivery</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Google Analytics</span>
+
+                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">VIDEO</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Editing</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Transcoding</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">FFMpeg</span>
+
+                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">ELECTRONICS</h6>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Micro Controllers</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SBC's</span>
+                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">LUA</span>
+
                             </div>
                         </div>
                     </div>
@@ -225,7 +264,7 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">CONTACT</h3>
+                                <h3 class="block-title font-w700">CONTACT</h3>
                             </div>
                             <div class="block-content">
                                 <ul class="nav-items push">
@@ -254,7 +293,7 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">LINKS</h3>
+                                <h3 class="block-title font-w700">LINKS</h3>
                             </div>
                             <div class="block-content">
                                 <ul class="nav-items push">
@@ -280,7 +319,7 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">REFERENCES</h3>
+                                <h3 class="block-title font-w700">REFERENCES</h3>
                             </div>
                             <div class="block-content">
                                 <ul class="nav-items push">
@@ -303,7 +342,7 @@
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title">INTERESTS</h3>
+                                <h3 class="block-title font-w700">INTERESTS</h3>
                             </div>
                             <div class="row block-content pb-2">
 
