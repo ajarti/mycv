@@ -401,6 +401,9 @@
 </template>
 
 <script>
+
+    // Please Note, some of the data is retrieved via Ajax and some of it is stored locally as JSON, this is simply to illustrate remote content loading.
+
     import HelperMixins from '../helper-mixins';
 
     export default {

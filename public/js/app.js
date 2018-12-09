@@ -581,6 +581,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
+// Please Note, some of the data is retrieved via Ajax and some of it is stored locally as JSON, this is simply to illustrate remote content loading.
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mixins: [__WEBPACK_IMPORTED_MODULE_0__helper_mixins___default.a],
