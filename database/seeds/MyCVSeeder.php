@@ -21,17 +21,6 @@ class MyCVSeeder extends Seeder
     ];
 
     public $positions = [
-
-        [
-            'title'         => 'Managing Member',
-            'company'       => 'Lodgestaff.com',
-            'location'      => 'Cape Town, South Africa',
-            'description'   => 'Lodgestaff.com began as a side project utilising latent staff capacity while I was IT Director / 50% Owner at Clickthinking.com (now iProspect South Africa).  The primary focus of the site was to service the recruiting needs of the Lodge Industry in Africa but rapidly grew into the preferred job board or the Hospitality Industry. I was initially only responsible for the technical design, strategy and build of the job board, but after taking it over full time in 2010, I have been responsible for the running of the business covering both technical management and general management.',
-            'thumb'         => 'lodgestaff.png',
-            'current'       => 1,
-            'start_date_at' => '2006-03-01',
-            'end_date_at'   => null,
-        ],
         [
             'title'         => 'Founder',
             'company'       => 'Ajarti Systems Development',
@@ -40,6 +29,16 @@ class MyCVSeeder extends Seeder
             'thumb'         => 'ajarti.png',
             'current'       => 1,
             'start_date_at' => '2009-02-01',
+            'end_date_at'   => null,
+        ],
+        [
+            'title'         => 'Managing Member',
+            'company'       => 'Lodgestaff.com',
+            'location'      => 'Cape Town, South Africa',
+            'description'   => 'Lodgestaff.com began as a side project utilising latent staff capacity while I was IT Director / 50% Owner at Clickthinking.com (now iProspect South Africa).  The primary focus of the site was to service the recruiting needs of the Lodge Industry in Africa but rapidly grew into the preferred job board or the Hospitality Industry. I was initially only responsible for the technical design, strategy and build of the job board, but after taking it over full time in 2010, I have been responsible for the running of the business covering both technical management and general management.',
+            'thumb'         => 'lodgestaff.png',
+            'current'       => 1,
+            'start_date_at' => '2006-03-01',
             'end_date_at'   => null,
         ],
         [
