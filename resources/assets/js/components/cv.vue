@@ -9,7 +9,7 @@
                         <h3 class="block-title font-w700">PROFILE</h3>
                         <hr class="mt-1">
                         <p>
-                            I have 30+ years of experience (25 commercial) in all aspect of IT. During this time I've performed roles covering the building of workstations/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last 18 years, full stack development and web server sysops.
+                            I have 30+ years of experience (25 commercial) in all aspect of IT. During this time I've performed roles covering the building of workstations/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last ~20 years, full stack development and web server sysops.
                         </p>
                         <p>
                             I pride myself on avoiding fads and ensuring the correct development strategy is selected, utilizing the right tools to fit both the budget and fulfill the requirements, yet maintaining an eye on the future in order to allow for an upgrade path. I am a huge fan of the Lean Startup strategy, developing in small increments and pivoting when needed based on customer experience and feedback.
