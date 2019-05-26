@@ -8,20 +8,21 @@
                         <!--PROFILE-->
                         <h3 class="block-title font-w700">PROFILE</h3>
                         <hr class="mt-1">
+
                         <p>
-                            I have 30+ years of experience (25 commercial) in all aspect of IT. During this time I've performed roles covering the building of workstations/servers/clusters from bare metal, designing and constructing networks to WAN level and for the last ~20 years, full stack development and web server sysops.
+                            I have 20 years of web development experience and I have an additional 10 years of sysops, server support and networking experience prior to my specialization in online development.
                         </p>
                         <p>
-                            I pride myself on avoiding fads and ensuring the correct development strategy is selected, utilizing the right tools to fit both the budget and fulfill the requirements, yet maintaining an eye on the future in order to allow for an upgrade path. I am a huge fan of the Lean Startup strategy, developing in small increments and pivoting when needed based on customer experience and feedback.
+                            With extensive experience in the industry, I pride myself on always delivering solutions that are right-sized for the client. By avoiding fads and selecting stable and proven frameworks / tools with large mature communities that provide rich support, I can stand on the shoulders of giants and maximise my client’s ROI. This enables continuity by ensuring a large pool of developers with the preferred skills to draw upon, limiting the usual onboarding debt and reducing
+                            costs.
                         </p>
                         <p>
-                            Having been the IT Director / Lead Dev for an agency for 10 years I understand the importance of managing client expectations and ensuring clarity in communication. I have worked with many leading brands such as Xchanging, BNP Paribas, Mitsubishi, Vodacom, Johnson & Johnson, Taj Hotels, &Beyond (see below ..)
+                            I am a huge fan of Agile development process and it's synergies with Lean Startup principles. Short focused sprints allow projects to pivot when necessary and avoid costly over engineering typical of the Waterfall approach.
                         </p>
                         <p>
-                            My preferred stack is Laravel/Vue and I have a preference for greenfield and product/SaaS based projects.
+                            My preferred stack is Laravel/Vue with a preference for greenfield and product/SaaS based projects.
                         </p>
                         <div class="row" data-aos="fade-up" data-aos-delay="50">
-
                             <template v-for="strength in strengths">
                                 <div class="col-xs-6 col-sm-4 col-md-6 col-lg-4 col-xl-2 text-center pt-3">
                                     <div class="js-pie-chart pie-chart js-pie-chart-enabled" :data-percent="strength.value" data-line-width="8" data-size="110" data-bar-color="#ef8a46" data-track-color="#e9e9e9" data-scale-color="#d9d9d9">
@@ -147,11 +148,98 @@
                         </div>
                     </div>
 
+                    <!--TECHNOLOGIES-->
+                    <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
+                        <div class="block block-rounded block-themed">
+                            <div class="block-header bg-gd-sun-op">
+                                <h3 class="block-title  font-w700">SKILLS / TECHNOLOGIES</h3>
+                            </div>
+                            <div class="block-content pb-3">
+
+                                <h6 class="font-w700 mb-1 font-size-sm">PHP</h6>
+                                <p class="font-size-sm text-muted">
+                                    PHP 7, OOP, MVC, primarily Laravel, Design Patterns ,some Zend / Symfony.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">JAVASCRIPT</h6>
+                                <p class="font-size-sm text-muted">
+                                    Vue, VueX, jQuery and varying exposer to Angular and other JS Frameworks.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">DATABASES</h6>
+                                <p class="font-size-sm text-muted">
+                                    MySQL, SQL, ORM, Eloquent varying exposer to NoSql, MongoDB, Redis.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">HTML / CSS</h6>
+                                <p class="font-size-sm text-muted">
+                                    HTML(5), Templating, CSS(3), Bootstrap, Material Design, Semantic UI, limited Sass/Stylus.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">API / INTEGRATIONS</h6>
+                                <p class="font-size-sm text-muted">
+                                    Ajax, REST, JSON, some GraphQL, E-commerce Integrations.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">ANALYTICS / MARKETING</h6>
+                                <p class="font-size-sm text-muted">
+                                    SEO, Facebook/Google Ads, SEM, Tagging.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">ANALYTICS / MARKETING</h6>
+                                <p class="font-size-sm text-muted">
+                                    SEO, Facebook/Google Ads, SEM, Tagging.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">SYSOPS</h6>
+                                <p class="font-size-sm text-muted">
+                                    Linux, Debian derivatives, Forge, Digital Ocean, limited AWS, Cloud.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">AGILE</h6>
+                                <p class="font-size-sm text-muted">
+                                    Scrum in simplified form, mainly short sprints with finite deliverables.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">GRAPHIC DESIGN</h6>
+                                <p class="font-size-sm text-muted">
+                                    Photoshop, some Sketch, Video Editing, CAD & basic 3D Modeling.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">SYSTEMS DESIGN</h6>
+                                <p class="font-size-sm text-muted">
+                                    Design/Spec systems including guiding clients through the process.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">UI</h6>
+                                <p class="font-size-sm text-muted">
+                                    I am not a designer, but I have a great eye for good design and an ability to emulate.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">UX</h6>
+                                <p class="font-size-sm text-muted">
+                                    No formal training, 20 years of successful project design with usability.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">TESTING</h6>
+                                <p class="font-size-sm text-muted">
+                                    Limited use of TDD due to time constraints/budgets, but familiar with techniques.
+                                </p>
+
+                                <h6 class="font-w700 mb-1 font-size-sm">VERSION CONTROL</h6>
+                                <p class="font-size-sm text-muted">
+                                    Git and variants. Some exposure to Jira / Confluence
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
                     <!--SKILLS-->
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title font-w700">SKILLS</h3>
+                                <h3 class="block-title font-w700">PRIMARY SKILLS WEIGHTS</h3>
                             </div>
                             <div class="block-content">
 
@@ -202,59 +290,57 @@
                         </div>
                     </div>
 
-                    <!--TECHNOLOGIES-->
+                    <!--INTERESTS-->
                     <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
                         <div class="block block-rounded block-themed">
                             <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title  font-w700">TECHNOLOGIES</h3>
+                                <h3 class="block-title font-w700">INTERESTS</h3>
                             </div>
-                            <div class="block-content pb-3">
-                                <h6 class="font-w400 text-gray mb-1 font-size-sm">WEB</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">PHP</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Javascript</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">HTML</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">CSS</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">MySql</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">NoSql</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Vue <small>(primary)</small></span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Laravel <small>(primary)</small></span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">API Integration</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">JS Frameworks</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">PHP Frameworks</span>
+                            <div class="row block-content pb-2">
 
-                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">SERVER</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Networking</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SysOps</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Linux</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Redis</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Nginx</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Apache</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">GD</span>
+                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
+                                    <a class="block block-rounded text-center bg-black-5" href="javascript:void(0)">
+                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/iot.jpg');">
+                                            <i class="fas fa-3x fa-microchip text-white-75"></i>
+                                        </div>
+                                        <div class="block-content block-content-full p-1">
+                                            <span class="font-w600 mb-0">IoT</span>
+                                        </div>
+                                    </a>
+                                </div>
 
-                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">DESIGN</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">UX</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">UI</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Photoshop</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Canvas</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Basic 3D Modelling</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Basic CAD</span>
+                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
+                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
+                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/rewild.jpg');">
+                                            <i class="fab fa-pagelines fa-3x text-white-75"></i>
+                                        </div>
+                                        <div class="block-content block-content-full p-1">
+                                            <p class="font-w600 mb-0">Rewilding</p>
+                                        </div>
+                                    </a>
+                                </div>
 
-                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">MARKETING</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SEO</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Adwords</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Facebook ADS</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Ad Delivery</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Google Analytics</span>
+                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
+                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
+                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/space.jpg');">
+                                            <i class="fas fa-atom fa-3x text-white-75"></i>
+                                        </div>
+                                        <div class="block-content block-content-full p-1">
+                                            <p class="font-w600 mb-0">Astrophysics</p>
+                                        </div>
+                                    </a>
+                                </div>
 
-                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">VIDEO</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Editing</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Transcoding</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">FFMpeg</span>
-
-                                <h6 class="font-w400 text-gray mt-3 mb-1 font-size-sm">ELECTRONICS</h6>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">Micro Controllers</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">SBC's</span>
-                                <span class="badge text-gray-dark bg-gray-light p-2 mb-2">LUA</span>
+                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
+                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
+                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/food.jpg');">
+                                            <i class="fas fa-utensils fa-3x text-white-75"></i>
+                                        </div>
+                                        <div class="block-content block-content-full p-1">
+                                            <p class="font-w600 mb-0">Gastronomy</p>
+                                        </div>
+                                    </a>
+                                </div>
 
                             </div>
                         </div>
@@ -334,62 +420,6 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--INTERESTS-->
-                    <div class="col-sm-12 pb-3" data-aos="fade-right" data-aos-delay="50">
-                        <div class="block block-rounded block-themed">
-                            <div class="block-header bg-gd-sun-op">
-                                <h3 class="block-title font-w700">INTERESTS</h3>
-                            </div>
-                            <div class="row block-content pb-2">
-
-                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
-                                    <a class="block block-rounded text-center bg-black-5" href="javascript:void(0)">
-                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/iot.jpg');">
-                                            <i class="fas fa-3x fa-microchip text-white-75"></i>
-                                        </div>
-                                        <div class="block-content block-content-full p-1">
-                                            <span class="font-w600 mb-0">IoT</span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
-                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
-                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/rewild.jpg');">
-                                            <i class="fab fa-pagelines fa-3x text-white-75"></i>
-                                        </div>
-                                        <div class="block-content block-content-full p-1">
-                                            <p class="font-w600 mb-0">Rewilding</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
-                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
-                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/space.jpg');">
-                                            <i class="fas fa-atom fa-3x text-white-75"></i>
-                                        </div>
-                                        <div class="block-content block-content-full p-1">
-                                            <p class="font-w600 mb-0">Astrophysics</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-sm-3 col-xs-12 col-md-12 col-lg-6">
-                                    <a class="block block-rounded bg-black-5 text-center" href="javascript:void(0)">
-                                        <div class="block-content block-content-full bg-image" style="background-image: url('/img/food.jpg');">
-                                            <i class="fas fa-utensils fa-3x text-white-75"></i>
-                                        </div>
-                                        <div class="block-content block-content-full p-1">
-                                            <p class="font-w600 mb-0">Gastronomy</p>
-                                        </div>
-                                    </a>
-                                </div>
-
                             </div>
                         </div>
                     </div>

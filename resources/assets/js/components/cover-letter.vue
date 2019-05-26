@@ -26,9 +26,9 @@
                         </div>
                         <div class="block-content">
                             <p>
-                                Senior Developer
+                                Senior Full Stack Developer
                                 <br>
-                                <small class="text-gray">Laravel Focused</small>
+                                <small class="text-gray">Laravel/Vue Focused</small>
                             </p>
                         </div>
                     </div>
@@ -54,24 +54,18 @@
                         </p>
 
                         <p>
-                            I am a Full Stack Developer with ~20 years of development experience. I currently specialise in Laravel coupled primarily with Vue on the frontend.
+                            I am a Full Stack Developer with ~20 years of development experience. I currently specialise in PHP (Laravel) with Vue on the frontend.
                         </p>
                         <p>
-                            I have 30+ years IT experience in total (25 commercial) having started at the early age of 9 as your typical nerd doing what he can to get games to work.
+                            I have a total of 30+ years of IT experience in total (25 commercial) having started previously worked as a Network Engineer as well as in 3rd Line Server Support.
                         </p>
                         <p>
-                            In my career thus far, I have done everything from building computers/servers/clusters from bare metal and managing them, designing and constructing networks(to WAN level) and for the last ~20 years, full stack online development utilizing cutting-edge backend/frontend frameworks.
+                            Having been a partner and IT Director of a digital agency for 10 years, I have a good understanding of client service from initial strategy to managing development and delivery of the project.
                         </p>
                         <p>
-                            I was a partner and IT Director of a digital agency for 10 years and have an good understanding of client interaction from initial strategy to managing development and delivery, having said this my preference is development.
-                        </p>
-                        <p>
-                            I have a deep understanding of the internet, it's core components and how everything hangs together. I have witnessed the Internet's evolution from the early ‘90s and as a result, I am able to select technologies and strategies that match the client’s needs and help maximize the project's probability of success.
-                            I pride myself on avoiding fads and ensuring that the correct strategy is selected, utilising the right tools that fit both the budget and fulfil the requirement.
-                            I am a fan of <a href="http://theleanstartup.com/" target="_blank" class="link-fx text-warning">The Lean Startup</a> methodology and strongly believe in small iterations to gauge feasibility as well as helping manage client expectations and budgets. I am also a huge fan of Basecamp's <a href="https://basecamp.com/books/rework" target="_blank" class="link-fx text-warning">Rework</a> principles.
-                        </p>
-                        <p>
-                            I feel very strongly about work-life balance. Balance was the driving force behind leaving my agency when my son was born, I believe well rested and happy developers are the most focused, productive and creative. I love to collaborate and share knowledge and believe in finding wonder in whatever you do.
+                            Having witnessed the Internet's evolution from the early ‘90s, I have a deep understanding of the internet and it's core components. I am able to select technologies and strategies that match the client’s needs and help to maximize the project's probability of success.
+                            I pride myself on avoiding fads and ensuring that the correct strategy is selected, utilising the right tools that fit both the budget and fulfil the requirements.
+                            I am a fan of <a href="http://theleanstartup.com/" target="_blank" class="link-fx text-warning">The Lean Startup</a> and developing using the Agile methodology. I strongly believe in small iterations to gauge feasibility as well as helping to manage client expectations and budgets.
                         </p>
                         <p>
                             I am a native English speaker living in Cape Town (South Africa) UTC+2.
